@@ -1,5 +1,6 @@
 body{
     background:url("../images/bg.png");
+    background-color: #f58d40;
 }
 .winnerBox{
     max-width:40rem;
@@ -73,3 +74,157 @@ body{
     left:25%;
 }
 
+
+
+/*中奖提示*/
+#mask{
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+}
+#mask .blin{
+  width: 100%;
+  height: 100%;
+  -o-animation: circle 10s linear infinite;
+  -ms-animation: circle 10s linear infinite;
+  -moz-animation: circle 10s linear infinite;
+  -webkit-animation: circle 10s linear infinite;
+  animation: circle 10s linear infinite;
+}
+@keyframes circle {
+  0% {
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+#mask .caidai{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/dianzhui.png");
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#mask .winning{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 100;
+  width: 36rem;
+  height: 32rem;
+  margin: -16rem 0 0 -18rem;
+  -o-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  -moz-transform: scale(0.1);
+  -webkit-transform: scale(0.1);
+  transform: scale(0.1);
+  background:url(../images/bg2.png) no-repeat;
+  background-size:100% 100%;
+  -webkit-background-size:100% 100%;
+}
+#mask .reback{
+  -o-animation: reback .5s linear forwards;
+  -ms-animation: reback .5s linear forwards;
+  -moz-animation: reback .5s linear forwards;
+  -webkit-animation: reback .5s linear forwards;
+  animation: reback .5s linear forwards;
+}
+@keyframes reback {
+  100% {
+    -o-transform: scale(1);
+    -ms-transform: scale(1);
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.winning p{
+  position: absolute;
+  left: 50%;
+  top: 15%;
+  width:80%;
+  margin-left:-40%;
+  color:#FFF;
+  font-size:4rem;
+  text-align:center;
+  }
+.winning p b{ font-size:3.5rem;}
+.winning .btn {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  z-index: 2;
+  width: 20rem;
+  height: 4rem;
+  line-height: 4rem;
+  margin-left: -10rem;
+  background-color:#ffee8d;
+  border-radius:2rem;
+  -webkit-border-radius:1.8rem;
+  color:#f62a39;
+  text-align:center;
+  font-size:3rem;
+}
+@keyframes shake {
+  50% {
+    -o-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+  }
+  100% {
+    -o-transform: rotate(5deg);
+    -ms-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+}
+#close {
+  opacity: 0;
+  position: absolute;
+  right: 0rem;
+  top: -1.06666667rem;
+  z-index: 10;
+  width: 0.85333333rem;
+  height: 0.85333333rem;
+  background-image: url("../images/close.png");
+  -o-animation: fadein .5s .5s linear forwards;
+  -ms-animation: fadein .5s .5s linear forwards;
+  -moz-animation: fadein .5s .5s linear forwards;
+  -webkit-animation: fadein .5s .5s linear forwards;
+  animation: fadein .5s .5s linear forwards;
+}
+@keyframes fadein {
+  100% {
+    opacity: 1;
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

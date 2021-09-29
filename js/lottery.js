@@ -7,42 +7,52 @@ var winnerList=[
         name:'文具盒/笔袋',
         logo:'./images/xx@2x.png',
         probability:'10%',
+        emoji: "😘😘😘"
     },{
         name:'笔、橡皮',
         logo:'./images/xx@2x.png',
         probability:'15%',
+        emoji: "😁😁😁"
     },{
         name:'胶带',
         logo:'./images/xx@2x.png',
         probability:'10%',
+        emoji: "😁😁😁"
     },{
         name:'AD钙奶',
         logo:'./images/xx@2x.png',
         probability:'10%',
+        emoji: "😉😉😉"
     },{
         name:'QQ糖',
         logo:'./images/xx@2x.png',
         probability:'15%',
+        emoji: "😋😋😋"
     },{
         name:'咪咪虾条',
         logo:'./images/xx@2x.png',
         probability:'15%',
+        emoji: "😋😋😋"
     },{
         name:'拼图',
         logo:'./images/xx@2x.png',
         probability:'10%',
+        emoji: "😍😍😍"
     },{
         name:'飞行棋',
         logo:'./images/xx@2x.png',
         probability:'10%',
+        emoji: "😝😝😝"
     },{
         name:'玩偶',
         logo:'./images/xx@2x.png',
         probability:'10%',
+        emoji: "🤠🤠🤠"
     },{
         name:'奖励翻倍',
         logo:'./images/xx@2x.png',
         probability:'3%',
+        emoji: "🤩🤩🤩"
     },
 ]
 
@@ -158,9 +168,9 @@ function runCup(i, item) {
     $('#myCanvas').rotate({
         angle: 0,
         animateTo: 2880 - angles,
-        duration: 8000,
+        duration: 5000,
         callback: function () {
-            alert(item.name);
+            win(item.name, item.emoji);
             $('#tupBtn').removeAttr('disabled', true);
         },
     });
@@ -204,3 +214,36 @@ $(document).on('click', '#tupBtn,.again', function () {
     var item = rnd(randomRate);
     runCup(item, winnerList[item]);
 });
+
+var $maskRule = $("#mask-rule"),//规则遮罩层
+    $mask = $("#mask"),//红包遮罩层
+	$mask2 = $("#mask2"),//红包遮罩层
+    $winning = $(".winning"),//红包
+    $card = $("#card"),
+    $close = $("#close");
+function win(a1, emoji) {
+    //遮罩层显示
+    var text = a1;
+    $('#emoji').html(emoji)
+    if (text == '谢谢参与~') {
+        $mask2.show();
+    } else {
+        $('#text1').html(text);
+        $mask.show();
+    }
+    $winning.addClass('reback');
+
+    setTimeout(function () {
+        $card.addClass('pull');
+    }, 500);
+
+    //关闭弹出层
+    $('#close,.win,.btn').click(function () {
+        //$close.click(function () {
+        $mask.hide();
+        $mask2.hide();
+        $winning.removeClass('reback');
+        $card.removeClass('pull');
+        // $("#tupBtn").show()
+    });
+}
