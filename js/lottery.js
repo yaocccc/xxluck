@@ -247,3 +247,23 @@ function win(a1, emoji) {
         // $("#tupBtn").show()
     });
 }
+
+const musics = [
+  '<source src="./music/1.flac"/>',
+  '<source src="./music/2.m4a"/>',
+  '<source src="./music/3.m4a"/>',
+  '<source src="./music/4.m4a"/>',
+  '<source src="./music/5.ogg"/>',
+  '<source src="./music/6.ogg"/>',
+  '<source src="./music/7.ogg"/>'
+]
+
+async function playMusic() {
+  var player = $("#player")[0]; /*jquery对象转换成js对象*/
+  if (player.paused){ /*如果已经暂停*/
+      player.play(); /*播放*/
+  }else {
+      player.pause();/*暂停*/
+  }
+}
+playMusic()

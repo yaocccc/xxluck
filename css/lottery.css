@@ -2,6 +2,9 @@ body{
     background:url("../images/bg.png");
     background-color: #f58d40;
 }
+#music{
+    z-index:1000;
+}
 .winnerBox{
     max-width:40rem;
     padding:30px;
