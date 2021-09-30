@@ -202,9 +202,12 @@ function rnd(rate) {
         aaa += aa.length
     }
     var random = Math.floor(Math.random() * aaa);
+    console.log(random);
+    console.log(randomParent);
     for (var i = 0; i < randomParent.length; i++) {
         if ($.inArray(random, randomParent[i]) > 0) {
-            return i + 1;
+            console.log(i);
+            return i;
         }
     }
 }
