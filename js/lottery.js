@@ -179,7 +179,6 @@ function runCup(i, item) {
 }
 //概率计算
 function rnd(rate) {
-    var random = Math.floor(Math.random() * 100);
     var myRandom = [];
     var randomList = [];
     var randomParent = [];
@@ -198,6 +197,11 @@ function rnd(rate) {
         temp = myRandom.slice(start, end);
         randomParent.push(temp);
     }
+    let aaa = 0
+    for (const aa of randomParent) {
+        aaa += aa.length
+    }
+    var random = Math.floor(Math.random() * aaa);
     for (var i = 0; i < randomParent.length; i++) {
         if ($.inArray(random, randomParent[i]) > 0) {
             return i + 1;
