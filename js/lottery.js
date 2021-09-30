@@ -36,12 +36,14 @@ var winnerList=[
     },{
         name:'拼图',
         logo:'./images/xx@2x.png',
-        probability:'8%',
+        // probability:'8%',
+        probability:'0%',
         emoji: "😍😍😍"
     },{
         name:'飞行棋',
         logo:'./images/xx@2x.png',
-        probability:'8%',
+        // probability:'8%',
+        probability:'0%',
         emoji: "😝😝😝"
     },{
         name:'小本子',
