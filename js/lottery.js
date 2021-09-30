@@ -6,7 +6,7 @@ var winnerList=[
     {
         name:'文具盒/笔袋',
         logo:'./images/xx@2x.png',
-        probability:'10%',
+        probability:'8%',
         emoji: "😘😘😘"
     },{
         name:'笔、橡皮',
@@ -36,12 +36,12 @@ var winnerList=[
     },{
         name:'拼图',
         logo:'./images/xx@2x.png',
-        probability:'10%',
+        probability:'8%',
         emoji: "😍😍😍"
     },{
         name:'飞行棋',
         logo:'./images/xx@2x.png',
-        probability:'10%',
+        probability:'8%',
         emoji: "😝😝😝"
     },{
         name:'小本子',
@@ -51,7 +51,7 @@ var winnerList=[
     },{
         name:'奖励翻倍',
         logo:'./images/xx@2x.png',
-        probability:'3%',
+        probability:'1%',
         emoji: "🤩🤩🤩"
     },
 ]
