@@ -168,7 +168,7 @@ function runCup(i, item) {
     $('#myCanvas').rotate({
         angle: 0,
         animateTo: 2880 - angles,
-        duration: 5000,
+        duration: 6000,
         callback: function () {
             win(item.name, item.emoji);
             $('#tupBtn').removeAttr('disabled', true);
@@ -212,6 +212,10 @@ $(document).on('click', '#tupBtn,.again', function () {
         randomRate.push(item.probability);
     });
     var item = rnd(randomRate);
+    var musicAuto = document.getElementById('player');
+    musicAuto.pause();
+    setTimeout(() => musicAuto.play(), 6100);
+    autoPlay()
     runCup(item, winnerList[item]);
 });
 
@@ -266,3 +270,13 @@ const musics = [
 //       player.pause();/*暂停*/
 //   }
 // }
+function autoPlay() {
+    var myAuto = document.getElementById('myaudio');
+    myAuto.play();
+}
+function closePlay() {
+    var myAuto = document.getElementById('myaudio');
+    myAuto.pause();
+    myAuto.load();
+}
+
