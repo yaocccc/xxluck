@@ -16,7 +16,7 @@ var winnerList=[
     },{
         name:'胶带',
         logo:'./images/xx@2x.png',
-        probability:'10%',
+        probability:'15%',
         emoji: "😁😁😁"
     },{
         name:'AD钙奶',
@@ -26,12 +26,12 @@ var winnerList=[
     },{
         name:'QQ糖',
         logo:'./images/xx@2x.png',
-        probability:'15%',
+        probability:'10%',
         emoji: "😋😋😋"
     },{
         name:'咪咪虾条',
         logo:'./images/xx@2x.png',
-        probability:'15%',
+        probability:'10%',
         emoji: "😋😋😋"
     },{
         name:'拼图',
@@ -44,9 +44,9 @@ var winnerList=[
         probability:'10%',
         emoji: "😝😝😝"
     },{
-        name:'玩偶',
+        name:'小本子',
         logo:'./images/xx@2x.png',
-        probability:'10%',
+        probability:'15%',
         emoji: "🤠🤠🤠"
     },{
         name:'奖励翻倍',
