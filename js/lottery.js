@@ -243,12 +243,10 @@ function win(a1, emoji) {
 
     //关闭弹出层
     $('#close,.win,.btn').click(function () {
-        //$close.click(function () {
         $mask.hide();
         $mask2.hide();
         $winning.removeClass('reback');
         $card.removeClass('pull');
-        // $("#tupBtn").show()
     });
 }
 
@@ -262,21 +260,7 @@ const musics = [
   '<source src="./music/7.ogg"/>'
 ]
 
-// async function playMusic() {
-//   var player = $("#player")[0]; /*jquery对象转换成js对象*/
-//   if (player.paused){ /*如果已经暂停*/
-//       player.play(); /*播放*/
-//   }else {
-//       player.pause();/*暂停*/
-//   }
-// }
 function autoPlay() {
     var myAuto = document.getElementById('myaudio');
     myAuto.play();
 }
-function closePlay() {
-    var myAuto = document.getElementById('myaudio');
-    myAuto.pause();
-    myAuto.load();
-}
-
