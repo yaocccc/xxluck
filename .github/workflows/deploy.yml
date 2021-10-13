@@ -1,0 +1,13 @@
+name: DEPLOY
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy xxluck
+        uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: cd /www/xxluck && git pull
+          host: ${{ secrets.SSH_HOST }}
+          username: root
+          password: ${{ secrets.SSH_PASSWORD }}
