@@ -9,9 +9,6 @@ bgmMP3.addEventListener('ended', playMusic, false);
 
 var mp3s = ['./music/1.flac', './music/2.m4a', './music/3.m4a', './music/4.m4a', './music/5.ogg', './music/6.ogg', './music/7.ogg'];
 var winnerList = [
-// 贴纸     立体模型     积木     捏捏乐玩偶   扭蛋
-// 橡皮 胶带  AD钙奶 咪咪虾条
-
     {
         name: '立体模型',
         logo: './images/xx@2x.png',
@@ -275,5 +272,6 @@ function win(a1, emoji) {
 function playMusic() {
     const index = Math.floor(Math.random() * mp3s.length);
     bgmMP3.src = mp3s[index];
+    bgmMP3.play();
 }
 playMusic();
