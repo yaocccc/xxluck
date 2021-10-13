@@ -1,62 +1,75 @@
 var angles;
 var radius = 130;
-var color = ["#fde284", "#fe9103", "rgba(0,0,0,0.5)", "#ffffff", "#b10105", "#fbc605"];
+var color = ['#fde284', '#fe9103', 'rgba(0,0,0,0.5)', '#ffffff', '#b10105', '#fbc605'];
 
-var winnerList=[
+var gudianMP3 = document.getElementById('gudianMP3');
+var bgmMP3 = document.getElementById('bgmMP3');
+bgmMP3.loop = false;
+bgmMP3.addEventListener('ended', playMusic, false);
+
+var mp3s = ['./music/1.flac', './music/2.m4a', './music/3.m4a', './music/4.m4a', './music/5.ogg', './music/6.ogg', './music/7.ogg'];
+var winnerList = [
     {
-        name:'文具盒/笔袋',
-        logo:'./images/xx@2x.png',
-        probability:'8%',
-        emoji: "😘😘😘"
-    },{
-        name:'笔、橡皮',
-        logo:'./images/xx@2x.png',
-        probability:'15%',
-        emoji: "😁😁😁"
-    },{
-        name:'胶带',
-        logo:'./images/xx@2x.png',
-        probability:'15%',
-        emoji: "😁😁😁"
-    },{
-        name:'AD钙奶',
-        logo:'./images/xx@2x.png',
-        probability:'10%',
-        emoji: "😉😉😉"
-    },{
-        name:'QQ糖',
-        logo:'./images/xx@2x.png',
-        probability:'10%',
-        emoji: "😋😋😋"
-    },{
-        name:'咪咪虾条',
-        logo:'./images/xx@2x.png',
-        probability:'10%',
-        emoji: "😋😋😋"
-    },{
-        name:'拼图',
-        logo:'./images/xx@2x.png',
-        // probability:'8%',
-        probability:'0%',
-        emoji: "😍😍😍"
-    },{
-        name:'飞行棋',
-        logo:'./images/xx@2x.png',
-        // probability:'8%',
-        probability:'0%',
-        emoji: "😝😝😝"
-    },{
-        name:'小本子',
-        logo:'./images/xx@2x.png',
-        probability:'15%',
-        emoji: "🤠🤠🤠"
-    },{
-        name:'奖励翻倍',
-        logo:'./images/xx@2x.png',
-        probability:'1%',
-        emoji: "🤩🤩🤩"
+        name: '文具盒/笔袋',
+        logo: './images/xx@2x.png',
+        probability: 8,
+        emoji: '😘😘😘',
     },
-]
+    {
+        name: '笔、橡皮',
+        logo: './images/xx@2x.png',
+        probability: 15,
+        emoji: '😁😁😁',
+    },
+    {
+        name: '胶带',
+        logo: './images/xx@2x.png',
+        probability: 15,
+        emoji: '😁😁😁',
+    },
+    {
+        name: 'AD钙奶',
+        logo: './images/xx@2x.png',
+        probability: 10,
+        emoji: '😉😉😉',
+    },
+    {
+        name: 'QQ糖',
+        logo: './images/xx@2x.png',
+        probability: 10,
+        emoji: '😋😋😋',
+    },
+    {
+        name: '咪咪虾条',
+        logo: './images/xx@2x.png',
+        probability: 5,
+        emoji: '😋😋😋',
+    },
+    {
+        name: '拼图',
+        logo: './images/xx@2x.png',
+        probability: 0,
+        emoji: '😍😍😍',
+    },
+    {
+        name: '飞行棋',
+        logo: './images/xx@2x.png',
+        probability: 0,
+        emoji: '😝😝😝',
+    },
+    {
+        name: '小本子',
+        logo: './images/xx@2x.png',
+        probability: 15,
+        emoji: '🤠🤠🤠',
+    },
+    {
+        name: '奖励翻倍',
+        logo: './images/xx@2x.png',
+        probability: 15,
+        emoji: '🤩🤩🤩',
+    },
+];
 
 var number = winnerList.length;
 $(document).ready(function () {
@@ -189,7 +202,7 @@ function rnd(rate) {
         var temp = [];
         var start = 0;
         var end = 0;
-        randomList.push(parseInt(rate[i].split('%')[0]));
+        randomList.push(rate[i]);
         for (var j = 0; j < randomList.length; j++) {
             start += randomList[j - 1] || 0;
             end += randomList[j];
@@ -197,16 +210,13 @@ function rnd(rate) {
         temp = myRandom.slice(start, end);
         randomParent.push(temp);
     }
-    let aaa = 0
-    for (const aa of randomParent) {
-        aaa += aa.length
+    let rs = 0;
+    for (const r of randomParent) {
+        rs += r.length;
     }
-    var random = Math.floor(Math.random() * aaa);
-    console.log(random);
-    console.log(randomParent);
+    var random = Math.floor(Math.random() * rs);
     for (var i = 0; i < randomParent.length; i++) {
         if ($.inArray(random, randomParent[i]) > 0) {
-            console.log(i);
             return i;
         }
     }
@@ -221,23 +231,22 @@ $(document).on('click', '#tupBtn,.again', function () {
         randomRate.push(item.probability);
     });
     var item = rnd(randomRate);
-    var musicAuto = document.getElementById('player');
-    musicAuto.pause();
-    setTimeout(() => musicAuto.play(), 6100);
-    autoPlay()
+    gudianMP3.play();
+    bgmMP3.pause();
+    setTimeout(() => bgmMP3.play(), 6100);
     runCup(item, winnerList[item]);
 });
 
-var $maskRule = $("#mask-rule"),//规则遮罩层
-    $mask = $("#mask"),//红包遮罩层
-	$mask2 = $("#mask2"),//红包遮罩层
-    $winning = $(".winning"),//红包
-    $card = $("#card"),
-    $close = $("#close");
+var $maskRule = $('#mask-rule'), //规则遮罩层
+    $mask = $('#mask'), //红包遮罩层
+    $mask2 = $('#mask2'), //红包遮罩层
+    $winning = $('.winning'), //红包
+    $card = $('#card'),
+    $close = $('#close');
 function win(a1, emoji) {
     //遮罩层显示
     var text = a1;
-    $('#emoji').html(emoji)
+    $('#emoji').html(emoji);
     if (text == '谢谢参与~') {
         $mask2.show();
     } else {
@@ -259,17 +268,9 @@ function win(a1, emoji) {
     });
 }
 
-const musics = [
-  '<source src="./music/1.flac"/>',
-  '<source src="./music/2.m4a"/>',
-  '<source src="./music/3.m4a"/>',
-  '<source src="./music/4.m4a"/>',
-  '<source src="./music/5.ogg"/>',
-  '<source src="./music/6.ogg"/>',
-  '<source src="./music/7.ogg"/>'
-]
-
-function autoPlay() {
-    var myAuto = document.getElementById('myaudio');
-    myAuto.play();
+// BGM音乐播放
+function playMusic() {
+    const index = Math.floor(Math.random() * mp3s.length);
+    bgmMP3.src = mp3s[index];
 }
+playMusic();

@@ -1,0 +1,27 @@
+<div id="audioBox"> 
+    <script type="text/javascript"> 
+        window.onload = function(){ 
+                    const mp3s = [
+                                "./music/1.flac",
+                                "./music/2.m4a",
+                                "./music/3.m4a",
+                                "./music/4.m4a",
+                                "./music/5.ogg",
+                                "./music/6.ogg",
+                                "./music/7.ogg",
+                            ];
+                    const myAudio = new Audio(); 
+                    myAudio.preload = true; 
+                    myAudio.controls = true; 
+                    myAudio.loop = false;
+                    myAudio.addEventListener('ended', playMusic, false); 
+                    document.getElementById("audioBox").appendChild(myAudio);
+
+                    function playMusic(){
+                        const index = Math.floor(Math.random() * mp3s.length);
+                        myAudio.src = mp3s[index];
+                    }
+                    playMusic();
+                } 
+    </script> 
+</div>
