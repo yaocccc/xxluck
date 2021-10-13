@@ -7,7 +7,7 @@ jobs:
       - name: deploy xxluck
         uses: garygrossgarten/github-action-ssh@release
         with:
-          command: cd /www/xxluck && git pull
+          command: cd /www/xxluck && git fetch --all && git reset --hard origin/master && git pull
           host: ${{ secrets.SSH_HOST }}
           username: root
           password: ${{ secrets.SSH_PASSWORD }}
