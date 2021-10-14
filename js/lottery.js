@@ -12,7 +12,7 @@ var winnerList = [
     {
         name: '立体模型',
         logo: './images/xx@2x.png',
-        probability: 8,
+        probability: 5,
         emoji: '😘😘😘',
     },
     {
@@ -54,19 +54,19 @@ var winnerList = [
     {
         name: '积木',
         logo: './images/xx@2x.png',
-        probability: 10,
+        probability: 8,
         emoji: '😍😍😍',
     },
     {
         name: '扭蛋',
         logo: './images/xx@2x.png',
-        probability: 15,
+        probability: 10,
         emoji: '🤠🤠🤠',
     },
     {
         name: '奖励翻倍',
         logo: './images/xx@2x.png',
-        probability: 20,
+        probability: 15,
         emoji: '🤩🤩🤩',
     },
 ];
