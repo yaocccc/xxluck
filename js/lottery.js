@@ -22,15 +22,15 @@ var winnerList = [
         emoji: '😁😁😁',
     },
     {
-        name: '胶带',
+        name: '胶带、贴纸',
         logo: './images/xx@2x.png',
         probability: 15,
         emoji: '😁😁😁',
     },
     {
-        name: '贴纸',
+        name: '可爱娃娃',
         logo: './images/xx@2x.png',
-        probability: 15,
+        probability: 5,
         emoji: '😁😁😁',
     },
     {
