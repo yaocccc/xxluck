@@ -30,7 +30,7 @@ var winnerList = [
     {
         name: '可爱娃娃',
         logo: './images/xx@2x.png',
-        probability: 5,
+        probability: 10,
         emoji: '😁😁😁',
     },
     {
