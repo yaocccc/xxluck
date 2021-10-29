@@ -42,7 +42,7 @@ var winnerList = [
     {
         name: '沾沾乐',
         logo: './images/xx@2x.png',
-        probability: 10,
+        probability: 2,
         emoji: '😋😋😋',
     },
     {
