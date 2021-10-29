@@ -2,17 +2,17 @@ var winnerList = [
     {
         name: '本子、尺子',
         logo: './images/xx@2x.png',
-        probability: 10,
+        probability: 15,
         emoji: '😘😘😘',
     },
     {
-        name: '笔、橡皮',
+        name: '橡皮、贴纸',
         logo: './images/xx@2x.png',
         probability: 15,
         emoji: '😁😁😁',
     },
     {
-        name: '胶带、贴纸',
+        name: '面包',
         logo: './images/xx@2x.png',
         probability: 15,
         emoji: '😁😁😁',
@@ -30,13 +30,13 @@ var winnerList = [
         emoji: '😉😉😉',
     },
     {
-        name: '捏捏乐玩偶',
+        name: '沾沾乐',
         logo: './images/xx@2x.png',
         probability: 10,
         emoji: '😋😋😋',
     },
     {
-        name: '咪咪虾条、海苔',
+        name: '咪咪虾条',
         logo: './images/xx@2x.png',
         probability: 10,
         emoji: '😋😋😋',
@@ -44,7 +44,7 @@ var winnerList = [
     {
         name: '积木、象棋',
         logo: './images/xx@2x.png',
-        probability: 8,
+        probability: 0,
         emoji: '😍😍😍',
     },
     {
