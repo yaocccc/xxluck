@@ -10,9 +10,9 @@ bgmMP3.addEventListener('ended', playMusic, false);
 var mp3s = ['./music/1.flac', './music/2.m4a', './music/3.m4a', './music/4.m4a', './music/5.ogg', './music/6.ogg', './music/7.ogg'];
 var winnerList = [
     {
-        name: '立体模型',
+        name: '本子、尺子',
         logo: './images/xx@2x.png',
-        probability: 0,
+        probability: 10,
         emoji: '😘😘😘',
     },
     {
@@ -46,13 +46,13 @@ var winnerList = [
         emoji: '😋😋😋',
     },
     {
-        name: '咪咪虾条',
+        name: '咪咪虾条、海苔',
         logo: './images/xx@2x.png',
         probability: 10,
         emoji: '😋😋😋',
     },
     {
-        name: '积木',
+        name: '积木、象棋',
         logo: './images/xx@2x.png',
         probability: 8,
         emoji: '😍😍😍',
@@ -60,7 +60,7 @@ var winnerList = [
     {
         name: '扭蛋',
         logo: './images/xx@2x.png',
-        probability: 0,
+        probability: 5,
         emoji: '🤠🤠🤠',
     },
     {
