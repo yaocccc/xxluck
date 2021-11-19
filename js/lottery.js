@@ -10,6 +10,12 @@ bgmMP3.addEventListener('ended', playMusic, false);
 var mp3s = ['./music/1.flac', './music/2.m4a', './music/3.m4a', './music/4.m4a', './music/5.ogg', './music/6.ogg', './music/7.ogg'];
 var winnerList = [
     {
+        name: '奖励翻倍',
+        logo: './images/xx@2x.png',
+        probability: 15,
+        emoji: '🤩🤩🤩',
+    },
+    {
         name: '本子、尺子',
         logo: './images/xx@2x.png',
         probability: 15,
@@ -18,13 +24,13 @@ var winnerList = [
     {
         name: '多肉花盆',
         logo: './images/xx@2x.png',
-        probability: 15,
+        probability: 10,
         emoji: '😁😁😁',
     },
     {
         name: '粘土套装',
         logo: './images/xx@2x.png',
-        probability: 15,
+        probability: 10,
         emoji: '😁😁😁',
     },
     {
@@ -42,7 +48,7 @@ var winnerList = [
     {
         name: '走珠玩具',
         logo: './images/xx@2x.png',
-        probability: 2,
+        probability: 10,
         emoji: '😋😋😋',
     },
     {
@@ -54,20 +60,14 @@ var winnerList = [
     {
         name: 'DIY贴画',
         logo: './images/xx@2x.png',
-        probability: 0,
+        probability: 10,
         emoji: '😍😍😍',
     },
     {
         name: '娃娃',
         logo: './images/xx@2x.png',
-        probability: 5,
+        probability: 10,
         emoji: '🤠🤠🤠',
-    },
-    {
-        name: '奖励翻倍',
-        logo: './images/xx@2x.png',
-        probability: 15,
-        emoji: '🤩🤩🤩',
     },
 ];
 
