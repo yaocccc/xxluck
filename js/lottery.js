@@ -8,69 +8,6 @@ bgmMP3.loop = false;
 bgmMP3.addEventListener('ended', playMusic, false);
 
 var mp3s = ['./music/1.flac', './music/2.m4a', './music/3.m4a', './music/4.m4a', './music/5.ogg', './music/6.ogg', './music/7.ogg'];
-var winnerList = [
-    {
-        name: '溜溜球',
-        logo: './images/xx@2x.png',
-        probability: 15,
-        emoji: '🤩🤩🤩',
-    },
-    {
-        name: '水彩画',
-        logo: './images/xx@2x.png',
-        probability: 10,
-        emoji: '😘😘😘',
-    },
-    {
-        name: '拼图',
-        logo: './images/xx@2x.png',
-        probability: 10,
-        emoji: '😁😁😁',
-    },
-    {
-        name: '刮刮画',
-        logo: './images/xx@2x.png',
-        probability: 0,
-        emoji: '😁😁😁',
-    },
-    {
-        name: '闪光陀螺',
-        logo: './images/xx@2x.png',
-        probability: 10,
-        emoji: '😁😁😁',
-    },
-    {
-        name: '钮扣画',
-        logo: './images/xx@2x.png',
-        probability: 20,
-        emoji: '😉😉😉',
-    },
-    {
-        name: '冰淇淋玩具',
-        logo: './images/xx@2x.png',
-        probability: 20,
-        emoji: '😋😋😋',
-    },
-    {
-        name: '乐高',
-        logo: './images/xx@2x.png',
-        probability: 5,
-        emoji: '😋😋😋',
-    },
-    {
-        name: '彩绘石膏',
-        logo: './images/xx@2x.png',
-        probability: 10,
-        emoji: '😍😍😍',
-    },
-    {
-        name: '圆柱魔方',
-        logo: './images/xx@2x.png',
-        probability: 10,
-        emoji: '🤠🤠🤠',
-    },
-];
-
 var number = winnerList.length;
 $(document).ready(function () {
     canvasRun();
